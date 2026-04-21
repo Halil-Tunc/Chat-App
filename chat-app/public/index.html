@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <section class="join-panel" id="joinPanel">
+        <div class="card">
+          <h1>Chat App</h1>
+          <p class="subtext">Join a room and start chatting in real time.</p>
+
+          <form id="joinForm">
+            <label for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              maxlength="20"
+              placeholder="Ex: Jim"
+              required
+            />
+
+            <label for="room">Room</label>
+            <input
+              id="room"
+              name="room"
+              type="text"
+              placeholder="general"
+              value="general"
+              required
+            />
+
+            <button type="submit">Join Chat</button>
+          </form>
+
+          <p class="status" id="statusText">Disconnected</p>
+        </div>
+      </section>
+
+      <section class="chat-panel hidden" id="chatPanel">
+        <aside class="sidebar">
+          <div class="sidebar-card">
+            <h2>Room</h2>
+            <p id="roomLabel">#general</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h2>You</h2>
+            <p id="youLabel">-</p>
+          </div>
+
+          <div class="sidebar-card">
+            <h2>Online Users</h2>
+            <ul id="usersList" class="users-list"></ul>
+          </div>
+        </aside>
+
+        <main class="chat-main">
+          <header class="chat-header">
+            <div>
+              <h2 id="headerRoom">#general</h2>
+              <p id="headerStatus">Connected</p>
+            </div>
+            <button id="leaveBtn" class="secondary-btn">Leave</button>
+          </header>
+
+          <div id="messages" class="messages"></div>
+
+          <div id="typingIndicator" class="typing-indicator"></div>
+
+          <form id="messageForm" class="message-form">
+            <input
+              id="messageInput"
+              type="text"
+              placeholder="Type your message..."
+              autocomplete="off"
+              maxlength="500"
+            />
+            <button type="submit">Send</button>
+          </form>
+        </main>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

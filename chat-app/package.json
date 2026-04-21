@@ -1,0 +1,14 @@
+{
+    "name": "chat-app-websocket",
+    "version": "1.0.0",
+    "description": "Real-time chat app using Express and WebSockets",
+    "main": "server.js",
+    "scripts": {
+      "dev": "node server.js",
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.21.2",
+      "ws": "^8.18.0"
+    }
+  }
